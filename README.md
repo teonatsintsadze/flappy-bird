@@ -3,5 +3,5 @@
 **Build:**  
 npm run build
 
-**Deploy on localhost:**
+**Deploy on localhost:**  
 npm run start
