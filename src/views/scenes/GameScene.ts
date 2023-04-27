@@ -1,4 +1,4 @@
-import Phaser, { Game } from "phaser";
+import Phaser from "phaser";
 import GameController from "../../controllers/GameController";
 import { Round } from "../../types/round.types";
 
@@ -96,7 +96,6 @@ export class GameScene extends Phaser.Scene {
         const playerHeight = this.player.height;
 
         const randCol = Math.floor(Math.random() * round.obstacles);
-        console.log(round)
 
         for (let i = 0; i < round.obstacles; i++) {
             upperColumnY = Phaser.Math.Between(-y/2 + playerHeight, -playerHeight);
@@ -126,6 +125,7 @@ export class GameScene extends Phaser.Scene {
     }
 
     public increaseRounds() {
+        this.controller.rounds++;
         this.roundsAmount++;
         this.controller.rounds = this.roundsAmount;
     }
